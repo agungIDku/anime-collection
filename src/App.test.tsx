@@ -1,9 +1,24 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import '@testing-library/jest-dom'
+import {render, screen} from '@testing-library/react'
+import {BrowserRouter, MemoryRouter} from 'react-router-dom'
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+import App from './App'
+
+test('full app rendering/navigating', async () => {
+  render(<App />, {wrapper: BrowserRouter})
+
+})
+
+test('landing on a bad page', () => {
+  const badRoute = '/some/bad/route'
+
+  // use <MemoryRouter> when you want to manually control the history
+  render(
+    <MemoryRouter initialEntries={[badRoute]}>
+      <App />
+    </MemoryRouter>
+  )
+
+  // verify navigation to "no match" route
+  expect(screen.getByText(/Page Not Found/i)).toBeInTheDocument()
+})
