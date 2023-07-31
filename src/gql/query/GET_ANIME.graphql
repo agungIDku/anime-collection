@@ -1,0 +1,20 @@
+ query ($id: Int, $page: Int, $perPage: Int, $search: String) {
+  Page (page: $page, perPage: $perPage) {
+     media (id: $id, search: $search) {
+      id
+      title {
+        romaji
+      }
+      bannerImage
+      episodes
+      averageScore
+    }
+    pageInfo {
+      total
+      currentPage
+      lastPage
+      hasNextPage
+      perPage
+    }
+  }
+}

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700&display=swap');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -7,8 +9,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -19,7 +21,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -43,16 +45,41 @@ table {
 }
 
 body {
-	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-	  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-	  sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-  }
-  
-  code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-	  monospace;
-  }
-  
+  margin: 0;
+  background-image: linear-gradient(
+    40deg,
+    hsl(210deg 68% 36%) 0%,
+    hsl(209deg 61% 41%) 6%,
+    hsl(209deg 55% 45%) 12%,
+    hsl(208deg 51% 49%) 18%,
+    hsl(207deg 54% 54%) 24%,
+    hsl(207deg 60% 58%) 30%,
+    hsl(206deg 67% 62%) 36%,
+    hsl(205deg 76% 67%) 43%,
+    hsl(204deg 88% 71%) 49%,
+    hsl(194deg 88% 63%) 55%,
+    hsl(186deg 81% 52%) 62%,
+    hsl(178deg 71% 50%) 68%,
+    hsl(165deg 68% 59%) 75%,
+    hsl(140deg 61% 68%) 81%,
+    hsl(97deg 58% 68%) 87%,
+    hsl(67deg 59% 63%) 94%,
+    hsl(46deg 87% 67%) 100%
+  );
+  background-repeat: no-repeat;
+  font-family: 'Overpass', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
