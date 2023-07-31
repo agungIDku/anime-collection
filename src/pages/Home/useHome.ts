@@ -4,13 +4,11 @@ import useGetAnime from "@gql/hooks/useGetAnime"
 import { home } from '@constants/config'
 import { useMemo } from "react";
 
-const PARAM_PAGE = 'page'
-
 function useHome() {
   const [searchParams] = useSearchParams();
 
   const getPage = useMemo(() => {
-    return +(searchParams.get(PARAM_PAGE) || '0') || 1
+    return +(searchParams.get(home.listAnime.paramsPage) || '0') || 1
   }, [searchParams])
 
   const { data } = useGetAnime({
@@ -22,8 +20,7 @@ function useHome() {
 
   return {
     data,
-    currentPage: getPage,
-    PARAM_PAGE
+    currentPage: getPage
   }
 }
 

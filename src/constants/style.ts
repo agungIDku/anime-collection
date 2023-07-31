@@ -2,7 +2,8 @@ const styleConst = Object.freeze({
   fontSize: {
     body2: '14px',
     body1: '16px',
-    body3: '12px'
+    body3: '12px',
+    h4: '18px'
   },
   color: {
     primary: '#1D5D9B',
@@ -18,6 +19,10 @@ const styleConst = Object.freeze({
     normal: 400,
     'semi-bold': 600,
     bold: 700
+  },
+  button: {
+    primary: '#1D5D9B',
+    secondary: '#468B97'
   }
 })
 

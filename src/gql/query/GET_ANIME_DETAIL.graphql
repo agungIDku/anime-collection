@@ -2,21 +2,27 @@
   Page (page: $page, perPage: $perPage) {
      media (id: $id, search: $search) {
       id
+      description
       title {
         romaji
       }
       coverImage {
         large
       }
+      season
+      seasonYear
+      format
+      bannerImage
       episodes
       averageScore
-    }
-    pageInfo {
-      total
-      currentPage
-      lastPage
-      hasNextPage
-      perPage
+      popularity
+      duration
+      genres
+      tags {
+        id
+        name
+        rank
+      }
     }
   }
 }

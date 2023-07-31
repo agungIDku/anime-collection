@@ -1,3 +1,5 @@
+import { ReactNode } from "react"
+
 interface AlignInterface {
   align?: 'left' | 'center' | 'right'
 }
@@ -17,10 +19,10 @@ interface LineHeightInterface {
 type CombineInterface = AlignInterface & ColorInterface & WeightInterface & LineHeightInterface
 
 export interface ParagraphInterface extends CombineInterface {
-  variant?: 'body3' | 'body2' | 'body1'
+  variant?: 'body3' | 'body2' | 'body1' | 'h4'
 }
 
 export interface TextInterface  extends CombineInterface {
   variant?: ParagraphInterface['variant']
-  children: string | number
+  children: ReactNode
 }

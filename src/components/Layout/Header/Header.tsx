@@ -11,7 +11,9 @@ const Header: FC = () => {
   return (
     <StyledContainer>
       <StyledContent>
-        <img src={Logo} height={64} alt="wolf logo" />
+        <Link to={routeConst.HOME}>
+          <img src={Logo} height={64} alt="wolf logo" />
+        </Link>
         <ul>
           <li>
             <Link to={routeConst.COLLECTION}>
