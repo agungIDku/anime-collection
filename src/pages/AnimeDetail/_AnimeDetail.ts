@@ -11,9 +11,14 @@ export const StyledBanner = styled.div`
 `
 
 export const StyledContent = styled.div`
-  width: 1050px;
+  width: auto;
+  max-width: 1050px;
   margin: 0 auto;
   display: flex;
+
+  @media (max-width: 590px) {
+    flex-direction: column;
+  }
 `
 
 export const StyledCover = styled.img<AnimeImageCover>`
@@ -24,15 +29,32 @@ export const StyledCover = styled.img<AnimeImageCover>`
   ${({ anyBanner }) => !anyBanner ? `
     margin-top: 24px;
   ` : ''};
+
+  @media (max-width: 590px) {
+    top: -340px
+  }
 `
 
 export const StyledLeft = styled.div<AnimeImageCover>`
   ${({ anyBanner }) => anyBanner ? `
     & button {
       position: relative;
-      top: -140px
+      top: -140px;
+
+      @media (max-width: 590px) {
+        top: -300px
+      }
     }
   ` : ''};
+
+  @media (max-width: 1030px) {
+    padding-left: 12px
+  }
+  @media (max-width: 590px) {
+    padding-right: 12px;
+    padding-top: 12px;
+    height: 70px
+  }
 `
 
 export const StyledAbout = styled.div`
@@ -49,6 +71,14 @@ export const StyledAbout = styled.div`
       }
     }
   }
+
+  @media (max-width: 1030px) {
+    padding-right: 12px
+  }
+
+  @media (max-width: 590px) {
+    padding: 12px
+  }
 `
 
 export const StyledTagContainer = styled.div`
@@ -64,6 +94,10 @@ export const StyledTagItem = styled.div`
   margin-top: 10px;
   align-items: center;
   flex: 0 1 calc(23% - 8px);
+
+  @media (max-width: 1030px) {
+    flex: none;
+  }
 `
 
 export const StyledContainerTags = styled.div`

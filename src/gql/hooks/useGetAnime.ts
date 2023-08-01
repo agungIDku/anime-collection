@@ -28,10 +28,10 @@ interface UseGetAnimeInterface {
 }
 
 const useGetAnime = ({ variables }: UseGetAnimeInterface) => {
-  const { data } = useQuery<
+  const { data, loading } = useQuery<
     UseGetAnimeResInterface,
     UseGetAnimeReqInterface
-  >(QUERY, { variables })
+  >(QUERY, { variables, notifyOnNetworkStatusChange: true })
 
   return {
     data: {
@@ -43,7 +43,8 @@ const useGetAnime = ({ variables }: UseGetAnimeInterface) => {
         perPage: 0,
         total: 0
       }
-    }
+    },
+    loading
   }
 }
 

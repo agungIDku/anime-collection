@@ -21,15 +21,16 @@ interface UseGetAnimeDetailInterface {
 }
 
 const useGetAnimeDetail = (params: UseGetAnimeDetailInterface) => {
-  const { data } = useQuery<
+  const { data, loading } = useQuery<
     UseGetAnimeDetailResInterface,
     UseGetAnimeDetailReqInterface
-  >(QUERY, params)
+  >(QUERY, {...params, notifyOnNetworkStatusChange: true })
 
   return {
     data: {
       media: data?.Page.media || []
-    }
+    },
+    loading
   }
 }
 

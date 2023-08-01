@@ -8,10 +8,10 @@ export const StyledContainer = styled.div`
 `
 
 export const StyledContent = styled.div`
-  width: 100%;
   max-width: 1050px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 12px;
 `

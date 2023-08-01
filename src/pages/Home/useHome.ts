@@ -11,7 +11,7 @@ function useHome() {
     return +(searchParams.get(home.listAnime.paramsPage) || '0') || 1
   }, [searchParams])
 
-  const { data } = useGetAnime({
+  const { data, loading } = useGetAnime({
     variables: {
       page: getPage || home.listAnime.pageInitial,
       perPage: home.listAnime.perPage
@@ -20,7 +20,8 @@ function useHome() {
 
   return {
     data,
-    currentPage: getPage
+    currentPage: getPage,
+    loading
   }
 }
 

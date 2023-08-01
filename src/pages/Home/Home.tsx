@@ -5,7 +5,7 @@ import useHome from "./useHome"
 import { StyledContainer, StyledHead } from "./_Home"
 
 function Home() {
-  const { data, currentPage } = useHome()
+  const { data, currentPage, loading } = useHome()
   return (
     <Layout>
       <StyledContainer>
@@ -18,7 +18,7 @@ function Home() {
             paramKey={home.listAnime.paramsPage}
           />
         </StyledHead>
-        <AnimeList data={data.media} />
+        <AnimeList data={data.media} loading={loading} />
       </StyledContainer>
     </Layout>
   )

@@ -11,6 +11,14 @@ export const StyledContainer = styled.div`
   position: relative;
   transition: transform .2s;
 
+  @media (max-width: 625px) {
+    width: 160px;
+  }
+
+  @media (max-width: 360px) {
+    width: 85%;
+  }
+
   &:hover {
     position: absolute;
     top: 0;

@@ -12,7 +12,8 @@ const root = ReactDOM.createRoot(
 );
 
 const client = new ApolloClient({
-  uri: process.env.REACT_APP_GRAPHQL_URL,
+  // uri: process.env.REACT_APP_GRAPHQL_URL,
+  uri: 'https://graphql.anilist.co',
   cache: new InMemoryCache(),
 });
 

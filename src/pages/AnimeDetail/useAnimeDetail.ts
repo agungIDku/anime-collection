@@ -21,7 +21,7 @@ function useAnimeDetail() {
     return +(params?.id || '0')
   }, [params])
 
-  const { data } = useGetAnimeDetail({
+  const { data, loading } = useGetAnimeDetail({
     variables: { id: getPage },
     skip: !getPage
   })
@@ -58,7 +58,8 @@ function useAnimeDetail() {
     handleToggleModal,
     isShowModalCreate,
     getCollection,
-    handleRefresh: () => animeListDetailDispatch({ type: 'SET_RELOAD' })
+    handleRefresh: () => animeListDetailDispatch({ type: 'SET_RELOAD' }),
+    loading
   }
 }
 
