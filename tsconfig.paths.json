@@ -9,7 +9,12 @@
       "@assets/*": ["./assets/*"],
       "@constants/*": ["./constants/*"],
       "@gql/*": ["./gql/*"],
-      "@type/*": ["./type/*"]
+      "@type/*": ["./type/*"],
+      "@utils/*": ["./utils/*"],
+      "@context/*": ["./context/*"],
+      "@hooks/*": ["./hooks/*"],
+      "crypto": ["node_modules/crypto-browserify"],
+      "stream": ["node_modules/stream-browserify"]
     }
   }
 }

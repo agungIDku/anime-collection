@@ -7,7 +7,7 @@ export const StyledBanner = styled.div`
   background-position: 50% 35%;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 400px;
+  height: 350px;
 `
 
 export const StyledContent = styled.div`
@@ -44,7 +44,7 @@ export const StyledAbout = styled.div`
   & table {
     & td {
       padding-top: 16px;
-      & p:first-child {
+      & p:first-of-type {
         margin-bottom: 6px;
       }
     }
@@ -70,4 +70,16 @@ export const StyledContainerTags = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+`
+
+export const StyledCollection = styled.div`
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  & > div {
+    display: flex;
+    gap: 4px;
+  }
 `

@@ -3,5 +3,8 @@ export const home = Object.freeze({
     perPage: 10,
     pageInitial: 1,
     paramsPage: 'page'
+  },
+  collection: {
+    keyPersist: 'anime_list'
   }
 })
