@@ -1,12 +1,16 @@
 import '@testing-library/jest-dom'
 import {render, screen} from '@testing-library/react'
 import {BrowserRouter, MemoryRouter} from 'react-router-dom'
+import { MockedProvider } from '@apollo/react-testing';
 
 import App from './App'
 
 test('full app rendering/navigating', async () => {
-  render(<App />, {wrapper: BrowserRouter})
-
+  render(
+    <MockedProvider>
+      <App />
+    </MockedProvider>
+  , {wrapper: BrowserRouter})
 })
 
 test('landing on a bad page', () => {
